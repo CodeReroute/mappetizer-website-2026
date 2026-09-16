@@ -3,6 +3,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import webConfig from "@/config/webConfig";
+import { asset } from "@/lib/asset";
 import { detectPlatform } from "@/lib/platform";
 import Button from "./Button";
 import BottomSheet from "./BottomSheet";
@@ -53,7 +54,7 @@ export default function DownloadButton({ label, sheet, className }: DownloadButt
       </Slot>
       <BottomSheet open={open} onClose={() => setOpen(false)} title={sheet.title} description={sheet.description}>
         <Qr>
-          <img src={webConfig.images.qrCode} alt="QR code to download mappetizer" />
+          <img src={asset(webConfig.images.qrCode)} alt="QR code to download mappetizer" />
         </Qr>
         <StoreButtons $direction="row" $gap="16px">
           <StoreButton store="appStore" />

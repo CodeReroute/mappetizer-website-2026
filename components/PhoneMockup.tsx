@@ -2,6 +2,7 @@
 
 import styled from "styled-components";
 import webConfig from "@/config/webConfig";
+import { asset } from "@/lib/asset";
 import { floatAnimation } from "@/theme/animations";
 
 type PhoneMockupProps = {
@@ -76,7 +77,7 @@ export default function PhoneMockup({ src, alt = "", frame = "white", className 
         <span className="button large" />
       </div>
       <div className="screen">
-        <img src={src} alt={alt} />
+        <img src={asset(src)} alt={alt} />
       </div>
       <div className="buttons right">
         <span className="button" />

@@ -3,6 +3,7 @@
 import styled from "styled-components";
 import webConfig from "@/config/webConfig";
 import siteContent from "@/content/site";
+import { asset } from "@/lib/asset";
 import { pillStyles, type ButtonTone } from "./Button";
 import { u } from "@/theme/theme";
 
@@ -50,7 +51,7 @@ export default function StoreButton({ store, tone = "dark", size = "md", classNa
       className={className}
       aria-label={`Download on ${label}`}
     >
-      <img className="icon" src={icon} alt="" />
+      <img className="icon" src={asset(icon)} alt="" />
       <span>{label}</span>
     </Anchor>
   );

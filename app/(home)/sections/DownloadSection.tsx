@@ -6,6 +6,7 @@ import Logo from "@/components/Logo";
 import Footer from "@/components/Footer";
 import StoreButton, { StoreButtons } from "@/components/StoreButton";
 import webConfig from "@/config/webConfig";
+import { asset } from "@/lib/asset";
 import { u } from "@/theme/theme";
 import Reveal from "@/components/Reveal";
 import homeContent from "../content";
@@ -23,7 +24,7 @@ const Wrapper = styled(Section)`
     position: absolute;
     inset: 0;
     pointer-events: none;
-    background: url("/images/download/kitchen-background.png") center / cover no-repeat;
+    background: url("${asset("/images/download/kitchen-background.png")}") center / cover no-repeat;
   }
   .bg::after {
     content: "";
@@ -91,7 +92,7 @@ export default function DownloadSection() {
       <div className="top">
         <Reveal className="scan" from="none">
           <span className="scan-label">{download.scanLabel}</span>
-          <img src={webConfig.images.qrCode} alt="QR code to download mappetizer" />
+          <img src={asset(webConfig.images.qrCode)} alt="QR code to download mappetizer" />
         </Reveal>
         <StoreButtons className="mobile-only" $gap="16px">
           <Reveal>

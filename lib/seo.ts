@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import webConfig from "@/config/webConfig";
+import { asset } from "@/lib/asset";
 
 export type SeoProps = {
   title: string;
@@ -52,12 +53,12 @@ export function buildSeo({
     },
     icons: {
       icon: [
-        { url: "/favicon.ico" },
-        { url: "/favicon.png", type: "image/png", media: "(prefers-color-scheme: light)" },
-        { url: "/favicon-white.png", type: "image/png", media: "(prefers-color-scheme: dark)" },
+        { url: asset("/favicon.ico") },
+        { url: asset("/favicon.png"), type: "image/png", media: "(prefers-color-scheme: light)" },
+        { url: asset("/favicon-white.png"), type: "image/png", media: "(prefers-color-scheme: dark)" },
       ],
-      shortcut: "/favicon.ico",
-      apple: "/favicon.png",
+      shortcut: asset("/favicon.ico"),
+      apple: asset("/favicon.png"),
     },
   };
 }

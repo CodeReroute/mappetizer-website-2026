@@ -2,6 +2,7 @@
 
 import styled, { css } from "styled-components";
 import webConfig from "@/config/webConfig";
+import { asset } from "@/lib/asset";
 import Reveal from "@/components/Reveal";
 import { floatAnimation } from "@/theme/animations";
 import Section, { Columns, Heading, Paragraphs, TopBar } from "@/components/Section";
@@ -27,7 +28,7 @@ const Wrapper = styled(Section)`
     position: absolute;
     inset: 0;
     pointer-events: none;
-    background: url("/images/hero/map-background.png") center / cover no-repeat;
+    background: url("${asset("/images/hero/map-background.png")}") center / cover no-repeat;
   }
   .bg::after {
     content: "";

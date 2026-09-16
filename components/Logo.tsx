@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import styled from "styled-components";
+import { asset } from "@/lib/asset";
 
 type LogoProps = {
   variant?: "black" | "white";
@@ -21,7 +22,7 @@ export default function Logo({ variant = "black", height = 32, className }: Logo
   return (
     <Anchor href="/" aria-label="mappetizer home" className={className}>
       <img
-        src={`/mappetizer-${variant}.png`}
+        src={asset(`/mappetizer-${variant}.png`)}
         alt="mappetizer"
         height={height}
         width={Math.round(height * RATIO)}

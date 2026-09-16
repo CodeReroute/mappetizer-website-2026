@@ -2,6 +2,7 @@
 
 import styled from "styled-components";
 import type { ReactNode } from "react";
+import { asset } from "@/lib/asset";
 
 type AvatarProps = {
   src: string;
@@ -88,7 +89,7 @@ export default function Avatar({
   return (
     <Wrapper $size={size} $reverse={reverse} className={className}>
       <div className="pic">
-        <img src={src} alt={name} />
+        <img src={asset(src)} alt={name} />
         <span className="badge">{badge}</span>
       </div>
       {followers && (
